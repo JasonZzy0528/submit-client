@@ -1,12 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker'
+import Immutable from 'immutable'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Root from '@/components/root'
+import configureStore, { history } from '@/redux/store'
+import { Provider } from 'react-redux'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const initialState = Immutable.Map()
+const store = configureStore(initialState)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const rootDOM = document.getElementById('root')
+
+if (rootDOM) {
+  ReactDOM.render(
+    <Provider store={store}>
+      <Root history={history} />
+    </Provider>,
+    rootDOM
+  )
+}
+
+serviceWorker.register()
