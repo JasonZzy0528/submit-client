@@ -4,7 +4,6 @@ import { BehaviorSubject } from 'rxjs'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { createBrowserHistory } from 'history'
 import { createEpicMiddleware } from 'redux-observable'
-import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux'
 import { persistState } from 'redux-devtools'
 import { routerMiddleware } from 'connected-react-router/immutable'
@@ -14,11 +13,6 @@ export const history = createBrowserHistory()
 const reducer = createRootReducer(history)
 
 export default preloadedState => {
-  const logger = createLogger({
-    level: 'info',
-    collapsed: true
-  })
-
   const reduxRouterMiddleware = routerMiddleware(history)
   const epicMiddleware = createEpicMiddleware()
   const epic$ = new BehaviorSubject(rootEpic)
@@ -27,7 +21,7 @@ export default preloadedState => {
   const hotReloadingEpic = (...args) =>
     epic$.pipe(switchMap(epic => epic(...args)))
 
-  const middleware = [epicMiddleware, reduxRouterMiddleware, logger]
+  const middleware = [epicMiddleware, reduxRouterMiddleware]
 
   const store = createStore(
     reducer,

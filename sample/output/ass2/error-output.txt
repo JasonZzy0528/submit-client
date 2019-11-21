@@ -1,0 +1,10 @@
+============================================
+=== Compiling with gcc -Wall -o ass2 *.c -lm
+============================================
+myass2.c:1:1: warning: null character(s) ignored
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: ld returned 1 exit status
+============================================
+=== Compilation finished
+No executable called ass2 was produced by compilation

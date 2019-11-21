@@ -3,7 +3,7 @@ import { combineReducers } from 'redux-immutable'
 import { connectRouter } from 'connected-react-router/immutable'
 import { switchMap } from 'rxjs/operators'
 
-let reducerRegistry = {}
+let reducerRegistry =  {}
 const reducer$ = new BehaviorSubject()
 
 export const reducerRegistry$ = reducer$.pipe(
@@ -19,6 +19,6 @@ const createRootReducer = history => {
   }
   reducerRegistry$.next(initialReducer)
   return combineReducers(initialReducer)
-}
+}   
 
 export default createRootReducer

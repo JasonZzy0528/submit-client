@@ -1,0 +1,54 @@
+@import "../../shared/styles/variable.scss";
+
+.login-container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-left-panel {
+  background-image: linear-gradient(to top right, $primary-color, #3a669b);
+  flex-shrink: 1;
+  max-width: 500px;
+  position: relative;
+  width: 32vw;
+}
+
+.login-right-panel {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.login-logo {
+  background-image: url("../../assets/logo-512.png");
+  background-size: contain;
+  height: 198px;
+  position: absolute;
+  right: -99px;
+  top: calc(20% - 99px);
+  width: 198px;
+}
+
+.login-logo:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.login-form {
+  height: 400px;
+  margin: 0;
+  max-width: 416px;
+  padding: 30px 60px 0;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-logo {
+    width: 128px;
+    height: 128px;
+    right: -64px;
+  }
+}

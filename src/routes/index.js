@@ -1,17 +1,24 @@
-import LoadingComponent from '@/shared/components/loading'
 import React, { lazy, Suspense } from 'react'
-import { Route, Switch } from 'react-router'
+import {
+  Redirect,
+  Route,
+  Switch
+} from 'react-router'
+import Loading from '@/shared/components/loading'
 
-const AsyncHome = (
+const Home = (
   lazy(() => import('@/components/home'))
 )
 
 const routes = (
-  <Switch>
-    <Suspense fallback={<LoadingComponent />}>
-      <Route path="/home" component={AsyncHome} />
-    </Suspense>
-  </Switch>
+  <Suspense fallback={<Loading />}>
+    <Switch>
+      <Route path="/home" component={Home} />
+      <Route exact strict path="/">
+        <Redirect to="/home" />
+      </Route>
+    </Switch>
+  </Suspense>
 )
 
 export default routes

@@ -1,0 +1,12 @@
+@import '~normalize.css';
+@import 'antd/dist/antd';
+
+body {
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}

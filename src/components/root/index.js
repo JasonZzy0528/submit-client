@@ -1,10 +1,9 @@
-import 'antd/dist/antd.css'
-import 'normalize.css'
 import PropTypes from 'prop-types'
 import React from 'react'
 import routes from '@/routes'
 import { ConnectedRouter } from 'connected-react-router/immutable'
 import { hot } from 'react-hot-loader/root'
+import '@/shared/styles/index.scss'
 
 const Root = props => {
   const { history } = props

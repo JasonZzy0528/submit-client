@@ -1,0 +1,9 @@
+============================================
+=== Compiling with gcc -Wall -o ass1 *.c -lm
+============================================
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: ld returned 1 exit status
+============================================
+=== Compilation finished
+No executable called ass1 was produced by compilation

@@ -1,4 +1,4 @@
-import * as serviceWorker from './serviceWorker'
+import * as serviceWorker from '@/serviceWorker'
 import Immutable from 'immutable'
 import React from 'react'
 import ReactDOM from 'react-dom'

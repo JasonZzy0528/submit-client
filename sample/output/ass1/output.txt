@@ -1,0 +1,164 @@
+============================================
+=== Compiling with gcc -Wall -o ass1 *.c -lm
+============================================
+============================================
+=== Compilation finished
+=== Submission testing begins
+=== test 1: ass1  < test4.txt
+=== Output: differs from expectations
+ |    STAGE ONE: This test data mostly just contains
+ |    text and whitespace, and no formatting commands.
+ |    Students who generate the right output for this
+ |    test file have a program that meets the Stage 1
+ |    (or better) expectations. The .p command indicates
+ |    a new paragraph, but only when the full-stop is in
+ |    column one, and only for a Stage Two program, and
+ |    that ".p" wasn't in column one, so a ".p" should
+ |    appear in the output. Cool, yes?!
+ |    1---5---10---15---20---25---30---35---40---45---50
+-|
+============================================
+=== test 2: ass1  < test5.txt
+=== Output: differs from expectations
+ |    STAGE TWO TEST.
+ |
+ |    Ok, so this test file contains some Stage Two
+ |    commands. In Stage Two, students need to be able
+ |    to deal with all of:
+ |    .b;
+ |    .p;
+ |    .l nn; and
+ |    .w nn.
+ |
+ |    Repeated ".p" commands should result in a single
+ |    new paragraph occurring; and the default left
+ |    margin of 4 and the default width of 50 should be
+ |    in operation, here is a ruler to help you check on
+ |    that:
+ |    1---5---10---15---20---25---30---35---40---45---50
+ |
+-|
+ |  And repeated ".l" commands (like there just were
+ |  in the input text) should result in a new left
+ |  margin equal to the last of the values entered,
+ |  without multiple paragraph breaks getting
+ |  generated; this paragraph should have a
+ |  two-character left margin, and still have a width
+ |  of 50 characters, here is the ruler again:
+ |  1---5---10---15---20---25---30---35---40---45---50
+ |
+-|
+ |  Finally, if ".w" is used, the line width
+ |  gets altered; this line should be in a
+ |  paragraph with a width of 40 characters.
+ |  So, to recap: at this point we should
+ |  have a left margin of two characters,
+ |  and up to 40 characters per line used by
+ |  the text. Care to count, anyone? Here is
+ |  a ruler to make use of...
+ |  1---5---10---15---20---25---30---35---40
+ |
+-|
+ |  And now, after another
+ |  paragraph break, the lines
+ |  should be thirty characters
+ |  long, here is another ruler to
+ |  let you check.
+-|
+ |  1---5---10---15---20---25---30---35---40
+ |  That ruler was preceded by a
+ |  ".b" command, but there
+ |  shouldn't be a blank line in
+ |  front of it, even though it is
+ |  a long token that exceeds the
+ |  current line width.
+ |
+ |  Ok, that's enough. Good luck
+ |  with dealing with all of that
+ |  Stage Two output. And hey, PS,
+ |  note that there are no Stage
+ |  Three commands in this test,
+ |  so Stage Two and Stage Three
+ |  programs will generate the
+ |  same output.
+ |
+ |  (But a Stage One program will
+ |  have just given one very long
+ |  paragraph for this input
+ |  file.)
+============================================
+=== test 3: ass1  < test6.txt
+=== Output: differs from expectations
+-|
+-|
+-|
+ |1---5---10---15---20---25---30---35---40---45---50
+ |
+ |                      STAGE THREE TEST
+ |                             by
+ |                    The Grumpy Lecturer
+ |          1---5---10---15---20---25---30---35---40
+ |
+-|
+ |          ----------------------------------------
+ |          1 Testing The .h Command
+ |
+ |          Ok, so that was a level one heading.
+ |
+ |          1.1 The .h command (again)
+ |
+ |          And that was a level two heading.
+ |
+ |          1.2 The .h command (a third time)
+ |
+-|
+ |          1---5---10---15---20---25---30---35---40
+ |          And that was a second level two heading,
+ |          it's all a bit boring really.
+ |
+ |          1.2.1 A third level heading
+ |
+ |          1.2.1.0.1 And straight away a fifth level heading
+ |
+ |          1.2.1.1 Followed by a fourth level heading
+ |
+ |          1.2.1.1.1 And then another fifth level heading
+ |
+ |          It is all not just a bit boring, but
+ |          actually really really boring -- this
+ |          text should be in paragraph number
+ |          1.2.1.1.1, if I have counted correctly.
+ |          And the lines should be not more than 40
+ |          characters long.
+ |          1---5---10---15---20---25---30---35---40
+ |
+-|
+ |          ----------------------------------------
+ |          2 The Last .h Command
+ |
+ |          What else to say? It's hard creating
+ |          these files of meaningless test data. It
+ |          just gets so challenging to be creative.
+ |
+ |                      But Not Always!
+ |
+ |          ----------------------------------------
+ |          3 The End of the Testing
+ |
+ |          This test file doesn't change the left
+ |          margin or the width, except at the
+ |          beginning, before any of the output is
+ |          generated (except that first overall
+ |          ruler). It just explores the heading and
+ |          centering commands that were a required
+ |          part of a Stage Three program, using a
+ |          .l left margin of 10 and a .w width of
+ |          40.
+ |
+ |                 Maybe your program worked!
+-|
+ |          1---5---10---15---20---25---30---35---40
+-|
+============================================
+=== Submission testing ended
+============================================
