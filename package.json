@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@hot-loader/react-dom": "^16.10.2",
-    "antd": "^3.24.2",
+    "antd": "^3.25.3",
     "connected-react-router": "^6.5.2",
     "diff2html": "^2.12.1",
     "history": "^4.10.1",
